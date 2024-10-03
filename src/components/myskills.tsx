@@ -4,7 +4,7 @@ import '../styles/global.css';
 const MySkills: React.FC = () => {
     return (
         <section id="MySkills" className="section">
-            <h2>Languages/Tools/Frameworks I'm Familiar With</h2>
+            <h2>Languages/ Tools/ Frameworks I'm Familiar With</h2>
             <table className="skills-table" align="center">
                 <tbody>
                 <tr>
@@ -73,7 +73,7 @@ const MySkills: React.FC = () => {
                 </tbody>
             </table>
 
-            <h2>Languages/Tools/Frameworks I'm Looking Forward to Master/Learn</h2>
+            <h2>Languages/ Tools/ Frameworks I'm Looking Forward to Master/Learn</h2>
             <table className="skills-table" align="center">
                 <tbody>
                 <tr>
