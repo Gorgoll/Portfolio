@@ -26,7 +26,7 @@ p {
 h1 {
     font-size: 500%;
     color: #8c47fc;
-    animation: h1colorChange 0.75s infinite;
+    animation: h1colorChange 3s infinite;
 }
 
 section {
@@ -47,15 +47,18 @@ section {
 nav {
     display: inline-block;
     margin: 15px 0;
+    padding: 0 5px;
     text-align: center;
 }
 
 nav {
     :is(a) {
-        position: relative;
+        padding: 0 3px;
         margin: 0 10px;
         border-style: outset;
         border-top: hidden;
+        border-bottom: hidden;
+        border-right: hidden;
         border-radius: 5px;
         border-color: #64016b;
         text-transform: uppercase;
@@ -64,9 +67,11 @@ nav {
         cursor: pointer;
     }
     :is(a:hover) {
-        position: relative;
+        padding: 3px 0;
         margin: 0 10px;
         border-style: inset;
+        border-left: hidden;
+        border-top: hidden;
         border-radius: 5px;
         text-transform: uppercase;
         text-decoration: none;
