@@ -10,6 +10,7 @@ body {
     padding: 0;
     text-align: center;
     background: radial-gradient(circle at 100%, #090112, #1d0140 40%, #090112 80%, #170c40 80%,#9f9fa1 100%);
+    animation: backgroundcolorchange 0.75s infinite;
     min-height: 100vh;
 }
 
@@ -25,8 +26,6 @@ p {
 h1 {
     font-size: 500%;
     color: #8c47fc;
-    box-shadow: #cac6cc;
-    text-shadow: #cac6cc;
     animation: h1colorChange 0.75s infinite;
 }
 
@@ -53,8 +52,10 @@ nav {
 
 nav {
     :is(a) {
+        position: relative;
         margin: 0 10px;
         border-style: outset;
+        border-top: hidden;
         border-radius: 5px;
         border-color: #64016b;
         text-transform: uppercase;
@@ -63,10 +64,10 @@ nav {
         cursor: pointer;
     }
     :is(a:hover) {
+        position: relative;
         margin: 0 10px;
         border-style: inset;
         border-radius: 5px;
-        border-color: #64016b;
         text-transform: uppercase;
         text-decoration: none;
         color: #ee03ff;
@@ -103,6 +104,15 @@ html {
 .skills-table img:hover {
     transform: scale(1.2);
 }
+.Section p {
+    text-align: center;
+    align-items: center;
+}
+
+.Section p svg {
+    margin-right: 8px;
+}
+
 
 @keyframes colorChange {
     0% {
@@ -148,5 +158,41 @@ html {
     }
     100% {
         color: #7b14db;
+    }
+}
+@keyframes backgroundcolorchange {
+
+    0% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, #090112 80%, #170c40 80%,#9f9fa1 100%);
+    }
+    10% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(11, 1, 20) 80%, rgb(25, 14, 66) 80%,rgb(159, 159, 159) 100%);
+    }
+    20% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(12, 1, 21) 80%, rgb(26, 14, 67) 80%,rgb(163, 163, 163) 100%);
+    }
+    30% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(13, 1, 22) 80%, rgb(27, 14, 68) 80%,rgb(168, 168, 168) 100%);
+    }
+    40% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(14, 1, 23) 80%, rgb(28, 14, 69) 80%,rgb(173, 173, 173) 100%);
+    }
+    50% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(15, 1, 24) 80%, rgb(29, 14, 70) 80%,rgb(176, 176, 176) 100%);
+    }
+    60% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(15, 1, 24) 80%, rgb(29, 14, 70) 80%,rgb(176, 176, 176) 100%);
+    }
+    70% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(14, 1, 23) 80%, rgb(28, 14, 69) 80%,rgb(173, 173, 173) 100%);
+    }
+    80% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(13, 1, 22) 80%, rgb(27, 14, 68) 80%,rgb(168, 168, 168) 100%);
+    }
+    90% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(12, 1, 21)  80%, rgb(26, 14, 67) 80%,rgb(163, 163, 163) 100%);
+    }
+    100% {
+        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(11, 1, 20) 80%, rgb(25, 14, 66) 80%,rgb(159, 159, 159) 100%);
     }
 }
