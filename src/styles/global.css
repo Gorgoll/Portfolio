@@ -1,27 +1,75 @@
-﻿@media (min-width: 789px) {
+﻿
+/*
+    Przepraszam was wszystkich, że musicie to czytać, ale tak jakoś wyszło, że strona jest tragiczna (taki był zamiar).
+    Przez te 7 h, które siedziałem i robiłem tę stronę, dostałem depresji, bólu pięt i zacząłem wątpić w rzeczywistość.
+ */
+@media (min-width: 769px) {
     body {
         margin: 0;
         padding: 0;
         max-width: 100%;
         text-align: center;
-        background: radial-gradient(circle at 100% 30%, #090112, #1d0140 40%, #090112 80%, #170c40 80%, #9f9fa1 100%);
+        background: radial-gradient(circle at 100% 30%, #090112, #1d0140 40%, #090112 75%, #1d0140 80%, #170c40 85%, #9f9fa1 100%);
+
         animation: backgroundcolorchange 0.75s infinite;
         min-height: 100vh;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    nav a {
+        background: #090112;
+        width: 6rem;
+        height: 2rem;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px outset #64016b;
+        border-radius: 5px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ee03ff;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a:hover {
+        border: 1px inset #64016b;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
 }
 
 @media (max-width: 768px) {
     body {
-        background: #1d0140 !important;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        text-align: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1d0140, #2a0133, #100013) !important;
+    }
+    .skills-row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav {
+        display: none;
     }
 }
-
-@media (max-width: 480px) {
-    body {
-        background: #1d0140 !important;
-    }
-}
-
 
 * {
     margin: 0;
@@ -30,9 +78,6 @@
     font-style: normal;
 }
 
-.Section {
-    color: #ebebeb;
-}
 
 p {
     display: block;
@@ -45,6 +90,44 @@ h1 {
     color: #8c47fc;
     animation: h1colorChange 1.5s infinite;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.skills-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.skills-row {
+    width: auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skills-row a {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.skills-row img {
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.skills-row img:hover {
+    transform: scale(1.2);
+}
+
 
 section {
     :is(h2) {
@@ -60,78 +143,19 @@ section {
     }
 }
 
-
-nav {
-    display: inline-block;
-    margin: 15px 0;
-    padding: 0 5px;
-    text-align: center;
-}
-
-nav {
-    :is(a) {
-        padding: 0 3px;
-        margin: 0 10px;
-        border-style: outset;
-        border-top: hidden;
-        border-bottom: hidden;
-        border-right: hidden;
-        border-radius: 5px;
-        border-color: #64016b;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #ee03ff;
-        cursor: pointer;
-    }
-    :is(a:hover) {
-        padding: 3px 0;
-        margin: 0 10px;
-        border-style: inset;
-        border-left: hidden;
-        border-top: hidden;
-        border-radius: 5px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #ee03ff;
-        cursor: pointer;
-    }
-}
-
 section {
+    color: #ebebeb;
     padding: 2rem 1rem;
     margin: 1rem 0;
     text-align: center;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-.skills-table {
-    align-items: center;
-    margin: 0 auto;
-    width: 20%;
-}
-
-.skills-table td {
-    width: 10%;
-    padding: 1rem;
-    text-align: center;
-}
-
-.skills-table img {
-    transition: transform 0.5s, filter 0.5s;
-}
-
-.skills-table img:hover {
-    transform: scale(1.2);
-}
-.Section p {
+section p {
     text-align: center;
     align-items: center;
 }
 
-.Section p svg {
+section p svg {
     margin-right: 8px;
 }
 
