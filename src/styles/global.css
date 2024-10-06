@@ -1,244 +1,353 @@
-﻿
-/*
+﻿/*
     Przepraszam was wszystkich, że musicie to czytać, ale tak jakoś wyszło, że strona jest tragiczna (taki był zamiar).
     Przez te 7 h, które siedziałem i robiłem tę stronę, dostałem depresji, bólu pięt i zacząłem wątpić w rzeczywistość.
  */
 @media (min-width: 769px) {
-    body {
-        margin: 0;
-        padding: 0;
-        max-width: 100%;
-        text-align: center;
-        background: radial-gradient(circle at 100% 30%, #090112, #1d0140 40%, #090112 75%, #1d0140 80%, #170c40 85%, #9f9fa1 100%);
+  body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    text-align: center;
+    background: radial-gradient(
+      circle at 100% 30%,
+      #090112,
+      #1d0140 40%,
+      #090112 75%,
+      #1d0140 80%,
+      #170c40 85%,
+      #9f9fa1 100%
+    );
 
-        animation: backgroundcolorchange 0.75s infinite;
-        min-height: 100vh;
-    }
-    nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 50%;
-        right: 1rem;
-        transform: translateY(-50%);
-        padding: 10px;
-        z-index: 1000;
-    }
+    animation: backgroundcolorchange 0.75s infinite;
+    min-height: 100vh;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    padding: 10px;
+    z-index: 1000;
+  }
 
-    nav a {
-        background: #090112;
-        width: 6rem;
-        height: 2rem;
-        padding: 10px;
-        margin: 5px 0;
-        border: 1px outset #64016b;
-        border-radius: 5px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: #ee03ff;
-        cursor: pointer;
-        transition: all 0.5s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  nav a {
+    background: #090112;
+    width: 6rem;
+    height: 2rem;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px outset #64016b;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ee03ff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    nav a:hover {
-        border: 1px inset #64016b;
-        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
-    }
+  nav a:hover {
+    border: 1px inset #64016b;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-        max-width: 100%;
-        text-align: center;
-        min-height: 100vh;
-        background: linear-gradient(135deg, #1d0140, #2a0133, #100013) !important;
-    }
-    .skills-row {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-    nav {
-        display: none;
-    }
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d0140, #2a0133, #100013) !important;
+  }
+  .skills-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  nav {
+    display: none;
+  }
 }
 
 * {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
+  margin: 0;
 }
 
-
 p {
-    display: block;
-    font-size: 125%;
+  display: block;
+  font-size: 1.2rem;
 }
 
 h1 {
-    font-size: 500%;
-    text-align: center;
-    color: #8c47fc;
-    animation: h1colorChange 1.5s infinite;
+  font-size: 5rem;
+  font-weight: 800;
+  text-align: center;
+  color: #8c47fc;
+  animation: h1colorChange 1.5s infinite;
+}
+
+h2 {
+  font-weight: 800;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #fff;
+}
+
+.page-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 2rem;
+
+  &first-child {
+    margin-top: 2rem;
+  }
+
+  &:last-child {
+    margin-bottom: 2rem;
+  }
 }
 
 .skills-container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .skills-row {
-    width: auto;
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+  width: auto;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .skills-row a {
-    display: flex;
-    justify-content: center;
-    width: 10%;
-    padding: 1rem;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  padding: 1rem;
+  text-align: center;
 }
 
 .skills-row img {
-    transition: transform 0.5s, filter 0.5s;
+  transition:
+    transform 0.5s,
+    filter 0.5s;
 }
 
 .skills-row img:hover {
-    transform: scale(1.2);
-}
-
-
-section {
-    :is(h2) {
-        display: inline;
-        font-size: 2rem;
-        padding: 1px 1px;
-        color: #7007f7;
-        transition: color 0.3s ease;
-    }
-    :is(h2:hover) {
-        padding: 1px;
-        animation: colorChange 1s infinite;
-    }
+  transform: scale(1.2);
 }
 
 section {
-    color: #ebebeb;
-    padding: 2rem 1rem;
-    margin: 1rem 0;
-    text-align: center;
+  }
+  :is(h2) {
+    display: inline;
+    font-size: 2rem;
+    padding: 1px 1px;
+    color: #7007f7;
+    transition: color 0.3s ease;
+  }
+  :is(h2:hover) {
+    padding: 1px;
+    animation: colorChange 1s infinite;
+  }
+}
+
+section {
+  color: #ebebeb;
+  padding: 2rem 1rem;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 section p {
-    text-align: center;
-    align-items: center;
+  text-align: center;
+  align-items: center;
 }
 
 section p svg {
-    margin-right: 8px;
+  margin-right: 8px;
 }
-
 
 @keyframes colorChange {
-    0% {
-        color: #7007f7;
-    }
-    50% {
-        color: #50208c;
-    }
-    100% {
-        color: #7b14db;
-    }
+  0% {
+    color: #7007f7;
+  }
+  50% {
+    color: #50208c;
+  }
+  100% {
+    color: #7b14db;
+  }
 }
 @keyframes h1colorChange {
-    0% {
-        color: #8c47fc;
-    }
-    10% {
-        color: #8242eb;
-    }
-    20% {
-        color: #7a3ddb;
-    }
-    30% {
-        color: #7139cc;
-    }
-    40% {
-        color: #6734ba;
-    }
-    50% {
-        color: #5f30ab;
-    }
-    60% {
-        color: #542999;
-    }
-    70% {
-        color:#542999;
-    }
-    80% {
-        color: #5f30ab;
-    }
-    90% {
-        color: #7139cc;
-    }
-    100% {
-        color: #8c47fc;
-    }
+  0% {
+    color: #8c47fc;
+  }
+  10% {
+    color: #8242eb;
+  }
+  20% {
+    color: #7a3ddb;
+  }
+  30% {
+    color: #7139cc;
+  }
+  40% {
+    color: #6734ba;
+  }
+  50% {
+    color: #5f30ab;
+  }
+  60% {
+    color: #542999;
+  }
+  70% {
+    color: #542999;
+  }
+  80% {
+    color: #5f30ab;
+  }
+  90% {
+    color: #7139cc;
+  }
+  100% {
+    color: #8c47fc;
+  }
 }
 @keyframes backgroundcolorchange {
+  0% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      #090112 80%,
+      #170c40 80%,
+      #9f9fa1 100%
+    );
+  }
+  10% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(11, 1, 20) 80%,
+      rgb(25, 14, 66) 80%,
+      rgb(159, 159, 159) 100%
+    );
+  }
+  20% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(12, 1, 21) 80%,
+      rgb(26, 14, 67) 80%,
+      rgb(163, 163, 163) 100%
+    );
+  }
+  30% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(13, 1, 22) 80%,
+      rgb(27, 14, 68) 80%,
+      rgb(168, 168, 168) 100%
+    );
+  }
+  40% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(14, 1, 23) 80%,
+      rgb(28, 14, 69) 80%,
+      rgb(173, 173, 173) 100%
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(15, 1, 24) 80%,
+      rgb(29, 14, 70) 80%,
+      rgb(176, 176, 176) 100%
+    );
+  }
+  60% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(15, 1, 24) 80%,
+      rgb(29, 14, 70) 80%,
+      rgb(176, 176, 176) 100%
+    );
+  }
+  70% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(14, 1, 23) 80%,
+      rgb(28, 14, 69) 80%,
+      rgb(173, 173, 173) 100%
+    );
+  }
+  80% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(13, 1, 22) 80%,
+      rgb(27, 14, 68) 80%,
+      rgb(168, 168, 168) 100%
+    );
+  }
+  90% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(12, 1, 21) 80%,
+      rgb(26, 14, 67) 80%,
+      rgb(163, 163, 163) 100%
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle at 100%,
+      #090112,
+      #1d0140 40%,
+      rgb(11, 1, 20) 80%,
+      rgb(25, 14, 66) 80%,
+      rgb(159, 159, 159) 100%
+    );
+  }
+}
 
-    0% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, #090112 80%, #170c40 80%,#9f9fa1 100%);
-    }
-    10% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(11, 1, 20) 80%, rgb(25, 14, 66) 80%,rgb(159, 159, 159) 100%);
-    }
-    20% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(12, 1, 21) 80%, rgb(26, 14, 67) 80%,rgb(163, 163, 163) 100%);
-    }
-    30% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(13, 1, 22) 80%, rgb(27, 14, 68) 80%,rgb(168, 168, 168) 100%);
-    }
-    40% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(14, 1, 23) 80%, rgb(28, 14, 69) 80%,rgb(173, 173, 173) 100%);
-    }
-    50% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(15, 1, 24) 80%, rgb(29, 14, 70) 80%,rgb(176, 176, 176) 100%);
-    }
-    60% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(15, 1, 24) 80%, rgb(29, 14, 70) 80%,rgb(176, 176, 176) 100%);
-    }
-    70% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(14, 1, 23) 80%, rgb(28, 14, 69) 80%,rgb(173, 173, 173) 100%);
-    }
-    80% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(13, 1, 22) 80%, rgb(27, 14, 68) 80%,rgb(168, 168, 168) 100%);
-    }
-    90% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(12, 1, 21)  80%, rgb(26, 14, 67) 80%,rgb(163, 163, 163) 100%);
-    }
-    100% {
-        background: radial-gradient(circle at 100%, #090112, #1d0140 40%, rgb(11, 1, 20) 80%, rgb(25, 14, 66) 80%,rgb(159, 159, 159) 100%);
-    }
+a {
+  text-decoration: none;
+  color: #ee03ff;
 }
