@@ -1,24 +1,25 @@
 ﻿/*
-    Przepraszam was wszystkich, że musicie to czytać, ale tak jakoś wyszło, że strona jest tragiczna (taki był zamiar).
+    Pragmatizes was wszystkich, że musicie to czytać, ale tak jakoś wyszło, że strona jest tragiczna (taki był zamiar).
     Przez te 7 h, które siedziałem i robiłem tę stronę, dostałem depresji, bólu pięt i zacząłem wątpić w rzeczywistość.
  */
-@media (min-width: 769px) {
+@media (min-width: 769px ) /* wiem ze to dziwna wartosc ale nie byłem trzeżwy k? */
+{
   body {
     margin: 0;
     padding: 0;
     max-width: 100%;
     text-align: center;
     background: radial-gradient(
-      circle at 100% 30%,
-      #090112,
-      #1d0140 40%,
-      #090112 75%,
-      #1d0140 80%,
-      #170c40 85%,
-      #9f9fa1 100%
+     circle at 100% 30%,
+     #000000,
+     #2d2d2d 40%,
+     #1a1a1a 75%,
+     #2d2d2d 80%,
+     #333333 85%,
+     #8c8c8c 100%
     );
 
-    animation: backgroundcolorchange 0.75s infinite;
+    animation: backgroundcolorchange 1.5s infinite;
     min-height: 100vh;
   }
   nav {
@@ -35,16 +36,16 @@
   }
 
   nav a {
-    background: #090112;
+    background: #000000;
     width: 6rem;
     height: 2rem;
     padding: 10px;
     margin: 5px 0;
-    border: 1px outset #64016b;
+    border: 1px outset #333333;
     border-radius: 5px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #ee03ff;
+    color: #ffffff;
     cursor: pointer;
     transition: all 0.5s ease;
     display: flex;
@@ -53,12 +54,13 @@
   }
 
   nav a:hover {
-    border: 1px inset #64016b;
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px inset #333333;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.2);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px)  /* jebnełem linear-gradient i stwierdziłem dobra moze byc nikt nie zauwazy*/
+{
   body {
     overflow-x: hidden;
     margin: 0;
@@ -66,7 +68,7 @@
     max-width: 100%;
     text-align: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #1d0140, #2a0133, #100013) !important;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c, #3d3d3d) !important;
   }
   .skills-row {
     display: flex;
@@ -84,14 +86,19 @@
 
 p {
   display: block;
-  font-size: 1.2rem;
+  text-align: center;
+  max-width: 600px;
+  font-size: 1.25rem;
+  margin: 20px auto;
+  line-height: 1.6;
+  padding: 0 15px;
 }
 
 h1 {
   font-size: 5rem;
   font-weight: 800;
   text-align: center;
-  color: #8c47fc;
+  color: #ffffff;
   animation: h1colorChange 1.5s infinite;
 }
 
@@ -104,7 +111,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
 }
 
 .page-sections {
@@ -149,8 +156,8 @@ html {
 
 .skills-row img {
   transition:
-    transform 0.5s,
-    filter 0.5s;
+          transform 0.5s,
+          filter 0.5s;
 }
 
 .skills-row img:hover {
@@ -158,17 +165,16 @@ html {
 }
 
 section {
-  }
   :is(h2) {
     display: inline;
     font-size: 2rem;
     padding: 1px 1px;
-    color: #7007f7;
+    color: #cccccc;
     transition: color 0.3s ease;
   }
   :is(h2:hover) {
     padding: 1px;
-    animation: colorChange 1s infinite;
+    animation: colorChange 2s infinite;
   }
 }
 
@@ -190,164 +196,132 @@ section p svg {
 
 @keyframes colorChange {
   0% {
-    color: #7007f7;
+    color: #cccccc;
   }
   50% {
-    color: #50208c;
+    color: #888888;
   }
   100% {
-    color: #7b14db;
+    color: #ffffff;
   }
 }
 @keyframes h1colorChange {
   0% {
-    color: #8c47fc;
-  }
-  10% {
-    color: #8242eb;
-  }
-  20% {
-    color: #7a3ddb;
-  }
-  30% {
-    color: #7139cc;
-  }
-  40% {
-    color: #6734ba;
+    color: #ffffff;
   }
   50% {
-    color: #5f30ab;
-  }
-  60% {
-    color: #542999;
-  }
-  70% {
-    color: #542999;
-  }
-  80% {
-    color: #5f30ab;
-  }
-  90% {
-    color: #7139cc;
+    color: #cccccc;
   }
   100% {
-    color: #8c47fc;
+    color: #888888;
   }
 }
+/* nie nawidze robic animacji bo nie potrafie :( */
 @keyframes backgroundcolorchange {
-  0% {
+  0%, 100% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      #090112 80%,
-      #170c40 80%,
-      #9f9fa1 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #0a0a0a 77%,
+     #323232 78%,
+     #3c3c3c 100%
     );
   }
   10% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(11, 1, 20) 80%,
-      rgb(25, 14, 66) 80%,
-      rgb(159, 159, 159) 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #0c0c0c 77%,
+     #353535 78%,
+     #3f3f3f 100%
     );
   }
   20% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(12, 1, 21) 80%,
-      rgb(26, 14, 67) 80%,
-      rgb(163, 163, 163) 100%
+    circle at 100%,
+    #0a0a0a,
+    #0f0f0f 60%,
+    #0e0e0e 77%,
+    #383838 78%,
+    #424242 100%
     );
   }
   30% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(13, 1, 22) 80%,
-      rgb(27, 14, 68) 80%,
-      rgb(168, 168, 168) 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #101010 77%,
+     #3b3b3b 78%,
+     #454545 100%
     );
   }
   40% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(14, 1, 23) 80%,
-      rgb(28, 14, 69) 80%,
-      rgb(173, 173, 173) 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #121212 77%,
+     #3e3e3e 78%,
+     #484848 100%
     );
   }
   50% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(15, 1, 24) 80%,
-      rgb(29, 14, 70) 80%,
-      rgb(176, 176, 176) 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #141414 77%,
+     #414141 78%,
+     #4b4b4b 100%
     );
   }
   60% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(15, 1, 24) 80%,
-      rgb(29, 14, 70) 80%,
-      rgb(176, 176, 176) 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #141414 77%,
+     #3e3e3e 78%,
+     #4b4b4b 100%
     );
   }
   70% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(14, 1, 23) 80%,
-      rgb(28, 14, 69) 80%,
-      rgb(173, 173, 173) 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #121212 77%,
+     #3b3b3b 78%,
+     #484848 100%
     );
   }
   80% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(13, 1, 22) 80%,
-      rgb(27, 14, 68) 80%,
-      rgb(168, 168, 168) 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #101010 77%,
+     #383838 78%,
+     #454545 100%
     );
   }
   90% {
     background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(12, 1, 21) 80%,
-      rgb(26, 14, 67) 80%,
-      rgb(163, 163, 163) 100%
-    );
-  }
-  100% {
-    background: radial-gradient(
-      circle at 100%,
-      #090112,
-      #1d0140 40%,
-      rgb(11, 1, 20) 80%,
-      rgb(25, 14, 66) 80%,
-      rgb(159, 159, 159) 100%
+     circle at 100%,
+     #0a0a0a,
+     #0f0f0f 60%,
+     #0e0e0e 77%,
+     #353535 78%,
+     #3f3f3f 100%
     );
   }
 }
 
+
 a {
   text-decoration: none;
-  color: #ee03ff;
+  color: #ffffff;
 }

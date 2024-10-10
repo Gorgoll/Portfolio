@@ -29,6 +29,7 @@ const MySkills: React.FC = () => {
             />
           </a>
           {/* wypierdol tego mysql bo to smierdzi troche tylko PostgresSQL */}
+          {/* moze kiedys wypierdole na razie zostaje k? */}
           <a
             href="https://www.mysql.com/"
             target="_blank"
