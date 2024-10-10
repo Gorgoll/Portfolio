@@ -12,7 +12,7 @@ const About: React.FC = () => {
      However, I don't really enjoy designing or working with hardware, which is why I switched to software.
      I would love to learn Arduino to kill two birds with one stone, but I mostly feel comfortable
      and enjoy making software (even though I’m not good at it yet).
-     I believe that with time, enough persistence, time and motivation, I can improve.
+     I believe that with time, enough persistence and motivation, I can improve.
     </p>
     <p>
      Although I didn’t accomplish much back then and lost touch with it for a while, I'm now eager to learn,
