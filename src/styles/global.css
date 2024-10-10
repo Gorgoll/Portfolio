@@ -1,5 +1,5 @@
 ﻿/*
-    Pragmatizes was wszystkich, że musicie to czytać, ale tak jakoś wyszło, że strona jest tragiczna (taki był zamiar).
+    przepraszam was wszystkich, że musicie to czytać, ale tak jakoś wyszło, że strona jest tragiczna (taki był zamiar).
     Przez te 7 h, które siedziałem i robiłem tę stronę, dostałem depresji, bólu pięt i zacząłem wątpić w rzeczywistość.
  */
 @media (min-width: 769px ) /* wiem ze to dziwna wartosc ale nie byłem trzeżwy k? */
@@ -148,8 +148,8 @@ html {
 
 .skills-row img {
   transition:
-          transform 0.5s,
-          filter 0.5s;
+   transform 0.5s,
+   filter 0.5s;
 }
 
 .skills-row img:hover {
