@@ -119,14 +119,6 @@ html {
   flex-direction: column;
   gap: 3rem;
   padding: 0 2rem;
-
-  &first-child {
-    margin-top: 2rem;
-  }
-
-  &:last-child {
-    margin-bottom: 2rem;
-  }
 }
 
 .skills-container {
