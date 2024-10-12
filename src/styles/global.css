@@ -2,21 +2,20 @@
     przepraszam was wszystkich, że musicie to czytać, ale tak jakoś wyszło, że strona jest tragiczna (taki był zamiar).
     Przez te 7 h, które siedziałem i robiłem tę stronę, dostałem depresji, bólu pięt i zacząłem wątpić w rzeczywistość.
  */
-@media (min-width: 769px ) /* wiem ze to dziwna wartosc ale nie byłem trzeżwy k? */
-{
+@media (min-width: 769px) /* wiem ze to dziwna wartosc ale nie byłem trzeżwy k? */ {
   body {
     margin: 0;
     padding: 0;
     max-width: 100%;
     text-align: center;
     background: radial-gradient(
-     circle at 100% 30%,
-     #000000,
-     #2d2d2d 40%,
-     #1a1a1a 75%,
-     #2d2d2d 80%,
-     #333333 85%,
-     #8c8c8c 100%
+      circle at 100% 30%,
+      #000000,
+      #2d2d2d 40%,
+      #1a1a1a 75%,
+      #2d2d2d 80%,
+      #333333 85%,
+      #8c8c8c 100%
     );
 
     animation: backgroundcolorchange 1.5s infinite;
@@ -59,8 +58,7 @@
   }
 }
 
-@media (max-width: 768px)  /* jebnełem linear-gradient i stwierdziłem dobra moze byc nikt nie zauwazy*/
-{
+@media (max-width: 768px) /* jebnełem linear-gradient i stwierdziłem dobra moze byc nikt nie zauwazy*/ {
   body {
     overflow-x: hidden;
     margin: 0;
@@ -108,7 +106,7 @@ h2 {
 
 html {
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   color: #ffffff;
@@ -147,9 +145,7 @@ html {
 }
 
 .skills-row img {
-  transition:
-   transform 0.5s,
-   filter 0.5s;
+  transition: transform 0.5s, filter 0.5s;
 }
 
 .skills-row img:hover {
@@ -157,16 +153,16 @@ html {
 }
 
 section {
-  :is(h2) {
+  h2 {
     display: inline;
     font-size: 2rem;
     padding: 1px 1px;
     color: #cccccc;
     transition: color 0.3s ease;
-  }
-  :is(h2:hover) {
-    padding: 1px;
-    animation: colorChange 2s infinite;
+    &:hover {
+      padding: 1px;
+      animation: colorChange 2s infinite;
+    }
   }
 }
 
@@ -210,108 +206,108 @@ section p svg {
 }
 /* nie nawidze robic animacji bo nie potrafie :( */
 @keyframes backgroundcolorchange {
-  0%, 100% {
+  0%,
+  100% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #0a0a0a 77%,
-     #323232 78%,
-     #3c3c3c 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #0a0a0a 77%,
+      #323232 78%,
+      #3c3c3c 100%
     );
   }
   10% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #0c0c0c 77%,
-     #353535 78%,
-     #3f3f3f 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #0c0c0c 77%,
+      #353535 78%,
+      #3f3f3f 100%
     );
   }
   20% {
     background: radial-gradient(
-    circle at 100%,
-    #0a0a0a,
-    #0f0f0f 60%,
-    #0e0e0e 77%,
-    #383838 78%,
-    #424242 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #0e0e0e 77%,
+      #383838 78%,
+      #424242 100%
     );
   }
   30% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #101010 77%,
-     #3b3b3b 78%,
-     #454545 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #101010 77%,
+      #3b3b3b 78%,
+      #454545 100%
     );
   }
   40% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #121212 77%,
-     #3e3e3e 78%,
-     #484848 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #121212 77%,
+      #3e3e3e 78%,
+      #484848 100%
     );
   }
   50% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #141414 77%,
-     #414141 78%,
-     #4b4b4b 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #141414 77%,
+      #414141 78%,
+      #4b4b4b 100%
     );
   }
   60% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #141414 77%,
-     #3e3e3e 78%,
-     #4b4b4b 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #141414 77%,
+      #3e3e3e 78%,
+      #4b4b4b 100%
     );
   }
   70% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #121212 77%,
-     #3b3b3b 78%,
-     #484848 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #121212 77%,
+      #3b3b3b 78%,
+      #484848 100%
     );
   }
   80% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #101010 77%,
-     #383838 78%,
-     #454545 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #101010 77%,
+      #383838 78%,
+      #454545 100%
     );
   }
   90% {
     background: radial-gradient(
-     circle at 100%,
-     #0a0a0a,
-     #0f0f0f 60%,
-     #0e0e0e 77%,
-     #353535 78%,
-     #3f3f3f 100%
+      circle at 100%,
+      #0a0a0a,
+      #0f0f0f 60%,
+      #0e0e0e 77%,
+      #353535 78%,
+      #3f3f3f 100%
     );
   }
 }
-
 
 a {
   text-decoration: none;
