@@ -99,7 +99,7 @@ h1 {
   font-weight: 800;
   text-align: center;
   color: #ffffff;
-  animation: h1colorChange 1.5s infinite;
+  animation: h1colorChange 1.5s infinite alternate;
 }
 
 h2 {
@@ -166,7 +166,7 @@ section {
   }
   :is(h2:hover) {
     padding: 1px;
-    animation: colorChange 2s infinite;
+    animation: colorChange 2s infinite alternate;
   }
 }
 
