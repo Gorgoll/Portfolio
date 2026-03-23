@@ -1,5 +1,5 @@
 import Hero from "./hero";
-import Skills from "./skills";
+import Contact from "./contact";
 import Projects from "./project";
 import Navbar from "./nav";
 
@@ -13,7 +13,7 @@ export default function App() {
             <Navbar />
             <div id="home"> <Hero /> </div>
             <div id="projects"> <Projects /> </div>
-            <div id="skills"> <Skills /> </div>
+            <div id="contact"> <Contact /> </div>
         </div>
     );
 }

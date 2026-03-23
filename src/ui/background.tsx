@@ -3,7 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import type { Engine, ISourceOptions } from "@tsparticles/engine";
 
-export default function ParticlesBackground() {
+export default function ParticleBackground() {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
