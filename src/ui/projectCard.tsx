@@ -1,8 +1,17 @@
-import React, { useState } from "react";
-import BoldThreeLetters from "../scripts/boldThreeLetters"
-export default function ProjectCard({ project, index = 0 }) {
-    const [hovered, setHovered] = useState(false);
+import { useState } from "react";
 
+interface ProjectCardProps {
+    project: {
+        name: string;
+        description: string;
+        image?: string;
+        tags: string[];
+    };
+    index?: number;
+}
+
+export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+    const [hovered, setHovered] = useState(false);
 
     // placeholder
     const imageSrc =
@@ -25,9 +34,9 @@ export default function ProjectCard({ project, index = 0 }) {
                     <h3 style={styles.title}>{project.name}</h3>
                 </div>
 
-                <p style={styles.description}>{BoldThreeLetters(project.description)}</p>
+                <p style={styles.description}>{project.description}</p>
 
-                {project.tags?.length > 0 && (
+                {project.tags.length > 0 && (
                     <div style={styles.tags}>
                         {project.tags.map((tag, i) => (
                             <span key={i} style={styles.tag}>
@@ -58,11 +67,11 @@ export default function ProjectCard({ project, index = 0 }) {
 }
 
 const styles = {
-    card: (hovered) => ({
+    card: (hovered: boolean) => ({
         display: "flex",
         borderRadius: "0.75em",
         overflow: "hidden",
-        position: "relative",
+        position: "relative" as const,
         background: hovered
             ? "rgba(255,255,255,0.04)"
             : "rgba(255,255,255,0.02)",
@@ -75,7 +84,7 @@ const styles = {
         minHeight: "130px",
     }),
 
-    accent: (hovered) => ({
+    accent: (hovered: boolean) => ({
         width: "3px",
         background: hovered
             ? "rgba(74,222,128,0.7)"
@@ -87,7 +96,7 @@ const styles = {
         flex: 1,
         padding: "1.6em 2em",
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "column" as const,
         justifyContent: "center",
         gap: "0.75em",
         minWidth: 0,
@@ -105,7 +114,7 @@ const styles = {
         fontWeight: 500,
         color: "rgba(74,222,128,0.6)",
         letterSpacing: "0.12em",
-        textTransform: "uppercase",
+        textTransform: "uppercase" as const,
     },
 
     title: {
@@ -127,7 +136,7 @@ const styles = {
 
     tags: {
         display: "flex",
-        flexWrap: "wrap",
+        flexWrap: "wrap" as const,
         gap: "0.4em",
     },
 
@@ -145,40 +154,39 @@ const styles = {
     imageWrapper: {
         width: "25%",
         minWidth: "25%",
-        position: "relative",
+        position: "relative" as const,
         overflow: "hidden",
     },
 
-    baseImage: (hovered) => ({
-        position: "absolute",
+    baseImage: (hovered: boolean) => ({
+        position: "absolute" as const,
         inset: 0,
         width: "100%",
         height: "100%",
-        objectFit: "cover",
+        objectFit: "cover" as const,
         filter: "brightness(0.25) saturate(0.2)",
         opacity: hovered ? 0.4 : 1,
         transform: hovered ? "scale(1.06)" : "scale(1)",
         transition: "all 0.3s ease",
     }),
 
-    hoverImage: (hovered) => ({
-        position: "absolute",
+    hoverImage: (hovered: boolean) => ({
+        position: "absolute" as const,
         inset: 0,
         width: "100%",
         height: "100%",
-        objectFit: "cover",
+        objectFit: "cover" as const,
         opacity: hovered ? 0.6 : 0,
         transform: hovered ? "scale(1.06)" : "scale(1)",
         transition: "all 0.6s ease",
     }),
 
-
-    overlay: (hovered) => ({
-        position: "absolute",
+    overlay: (hovered: boolean) => ({
+        position: "absolute" as const,
         inset: 0,
         background: "rgba(8,12,20,0.55)",
         opacity: hovered ? 0 : 1,
         transition: "opacity 0.5s ease",
         zIndex: 1,
     }),
-};
+} as const;

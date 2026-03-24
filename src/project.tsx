@@ -1,7 +1,14 @@
-import React from 'react';
-import ProjectCard from './ui/projectCard';
+import ProjectCard from "./ui/projectCard";
 
-const projects = [
+interface Project {
+    id: number;
+    name: string;
+    description: string;
+    image?: string;
+    tags: string[];
+}
+
+const projects: Project[] = [
     {
         id: 1,
         name: "lorem",

@@ -19,7 +19,7 @@ export default function ParticleBackground() {
         particles: {
             number: {
                 value: 75,
-                density: { enable: false, width: window.innerWidth, height: window.innerHeight },
+                density: { enable: false},
             },
             color: { value: ["#83db7b", "#0f5908", "#22c55e"] },
             shape: { type: "circle" },

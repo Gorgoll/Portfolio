@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 const links = ["Home", "Projects", "Contact"];
 
 export default function Navbar() {

@@ -1,5 +1,3 @@
-import ParticleBackground from "./ui/background";
-
 export default function hero() {
     return (
         <section style={{

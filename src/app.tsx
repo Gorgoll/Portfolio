@@ -10,7 +10,6 @@ export default function App() {
             background: "#1a0a2e",
             minHeight: "100vh",
             color: "#f1f5f9",
-            margin: 0,
         }}>
             <ParticleBackground />
             <Navbar />
