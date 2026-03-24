@@ -1,6 +1,7 @@
 import React from 'react';
 
 function BoldThreeLetters(text){
+    // scrapped?
     return text
         .split(' ')
         .map(word => {

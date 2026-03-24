@@ -41,7 +41,6 @@ export default function Navbar() {
                                 color: active === link ? "#22c55e" : "rgba(255,255,255,0.7)",
                                 fontSize: "13px",
                                 fontWeight: active === link ? 600 : 400,
-                                cursor: "pointer",
                                 transition: "all 0.15s ease",
                             }}
                             onMouseEnter={(e) => {
@@ -67,7 +66,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen((o) => !o)}
                 className="mobile-menu-btn"
                 style={{
-                    position: "fixed",
+                    position: "absolute",
                     top: 16,
                     right: 16,
                     zIndex: 50,
@@ -76,6 +75,8 @@ export default function Navbar() {
                     borderRadius: "6px",
                     border: "1px solid rgba(34,197,94,0.8)",
                     background: "rgba(26,10,46,0.85)",
+                    display: "flex",
+                    flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "5px",
@@ -83,15 +84,15 @@ export default function Navbar() {
                 }}
             >
                 {menuOpen ? (
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <svg width="18" height="18" viewBox="0 0 18 18">
                         <line x1="2" y1="2" x2="16" y2="16" stroke="#22c55e" strokeWidth="1.8" strokeLinecap="round" />
                         <line x1="16" y1="2" x2="2" y2="16" stroke="#22c55e" strokeWidth="1.8" strokeLinecap="round" />
                     </svg>
                 ) : (
                     <>
-                        <span style={{ width: "18px", height: "1.5px", background: "rgba(255,255,255,0.7)", borderRadius: "2px" }} />
-                        <span style={{ width: "14px", height: "1.5px", background: "rgba(255,255,255,0.7)", borderRadius: "2px" }} />
-                        <span style={{ width: "18px", height: "1.5px", background: "rgba(255,255,255,0.7)", borderRadius: "2px" }} />
+                        <span style={{ width: "18px", height: "2px", background: "rgba(255,255,255,0.7)"}} />
+                        <span style={{ width: "18px", height: "1.5px", background: "rgba(255,255,255,0.7)" }} />
+                        <span style={{ width: "18px", height: "2px", background: "rgba(255,255,255,0.7)" }} />
                     </>
                 )}
             </button>
@@ -108,6 +109,7 @@ export default function Navbar() {
                         background: "rgba(26,10,46,0.95)",
                         borderRadius: "12px",
                         padding: "6px",
+                        display: "flex",
                         flexDirection: "column",
                         gap: "2px",
                         minWidth: "160px",
@@ -125,7 +127,6 @@ export default function Navbar() {
                                 color: active === link ? "#22c55e" : "rgba(255,255,255,0.7)",
                                 fontSize: "14px",
                                 fontWeight: active === link ? 600 : 400,
-                                cursor: "pointer",
                                 textAlign: "left",
                                 width: "100%",
                                 transition: "all 0.15s ease",

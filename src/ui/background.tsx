@@ -12,8 +12,9 @@ export default function ParticleBackground() {
         }).then(() => setInit(true));
     }, []);
 
+    // hella ugly
     const particlesOptions: ISourceOptions = {
-        fullScreen: { enable: false },
+        fullScreen: { enable: true },
         background: { color: "transparent" },
         particles: {
             number: {
@@ -40,8 +41,6 @@ export default function ParticleBackground() {
                 attract: { enable: false },
             },
         },
-        interactivity: { events: { onHover: { enable: false } } },
-        detectRetina: true,
     };
 
     return (
@@ -50,8 +49,7 @@ export default function ParticleBackground() {
             inset: 0,
             width: "100%",
             height: "100%",
-            overflow: "hidden",
-            backgroundImage: "linear-gradient(to bottom, #000000 0%,#0b0317 60, #1a0a2e 100%)",
+            overflow: "hidden"
         }}>
             {init && (
                 <Particles

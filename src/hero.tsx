@@ -9,8 +9,8 @@ export default function hero() {
             alignItems: "center",
             justifyContent: "center",
             overflow: "hidden",
+            background: "radial-gradient(ellipse at center, rgba(74,222,128,0.4) 0%, transparent 70%)",
         }}>
-            <ParticleBackground />
 
             <div style={{
                 position: "relative",
@@ -22,17 +22,16 @@ export default function hero() {
                 <h1 style={{
                     margin: "0 0 0.3em",
                     fontSize: "7em",
-                    fontWeight: 800, lineHeight: 1.06, letterSpacing: "-2.5px",
+                    fontWeight: 800, letterSpacing: "-2.5px",
                     color: "#f8fafc",
                 }}>
                     todo
                 </h1>
 
                 <p style={{
-                    margin: "0 0 40px",
                     fontSize: "2em", lineHeight: 1.7,
                     color: "rgba(255,255,255,0.45)",
-                    maxWidth: "460px", marginLeft: "auto", marginRight: "auto",
+                    maxWidth: "460px",
                 }}>
                     todo
                 </p>
