@@ -5,6 +5,7 @@ import type { Engine, ISourceOptions } from "@tsparticles/engine";
 
 export default function ParticleBackground() {
     const [init, setInit] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
         initParticlesEngine(async (engine: Engine) => {
@@ -12,13 +13,21 @@ export default function ParticleBackground() {
         }).then(() => setInit(true));
     }, []);
 
-    // hella ugly
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 640);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const particlesOptions: ISourceOptions = {
         fullScreen: { enable: true },
         background: { color: "transparent" },
         particles: {
             number: {
-                value: 75,
+                value: isMobile ? 20 : 75,
                 density: { enable: false},
             },
             color: { value: ["#83db7b", "#0f5908", "#22c55e"] },

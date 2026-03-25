@@ -65,7 +65,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen((o) => !o)}
                 className="mobile-menu-btn"
                 style={{
-                    position: "absolute",
+                    position: "fixed",
                     top: 16,
                     right: 16,
                     zIndex: 50,

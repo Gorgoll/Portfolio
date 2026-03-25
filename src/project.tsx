@@ -11,24 +11,24 @@ interface Project {
 const projects: Project[] = [
     {
         id: 1,
-        name: "lorem",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet vehicula elit. Cras tellus diam, pharetra at iaculis vitae.",
+        name: "StarBird",
+        description: "A simple interpreted language made in c#.",
         image: "",
-        tags: ["todo"],
+        tags: ["C#"],
     },
     {
         id: 2,
-        name: "ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet vehicula elit. Cras tellus diam, pharetra at iaculis vitae.",
+        name: "Cdg",
+        description: "A terminal directory navigator. Browse your filesystem interactively and cd into any folder without typing paths.",
         image: "",
-        tags: ["todo"],
+        tags: ["C#","Spectre"],
     },
     {
         id: 3,
-        name: "lorem ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet vehicula elit. Cras tellus diam, pharetra at iaculis vitae.",
+        name: "Rung",
+        description: "A minimal Pong clone that runs entirely in terminal. Built in rust",
         image: "",
-        tags: ["todo"],
+        tags: ["Rust","Crossterm"],
     },
 ];
 
@@ -51,6 +51,14 @@ const Project = () => {
                         <ProjectCard key={project.id} project={project} index={index} />
                     ))}
                 </div>
+            </div>
+            <div style={{
+                textAlign: "center",
+                marginBottom: "1em",
+                fontWeight: 700,
+                fontSize: "1.5em",
+            }}>
+                AND MANY MORE!!!
             </div>
         </div>
     );
